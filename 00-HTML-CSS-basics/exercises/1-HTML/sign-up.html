@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Sign up</title>
+  <link href="styles/sign-up.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Sign Up</h1>
+  </header>
+  <form id="contact-form" action="" method="get">
+
+    <ul>
+      <li><label for="firstName">First name:</label> <input type="text" name="firstName" id="firstName" value=""
+          required /></li>
+      <li><label for="lastName">Last name:</label> <input type="text" name="lastName" id="lastName" value="" required />
+      </li>
+      <li><label for="email">Email:</label> <input type="email" name="email" id="email" value="" required /></li>
+      <li><label for="birthday">Birthday:</label> <input type="date" name="birthday" id="birthday"
+          required />
+    </ul>
+
+    <ul>
+      <li><label for="favoriteSport">Favorite sport:</label>
+        <select name="favoriteSport" id="favoriteSport" required>
+          <option value="">Select favorite sport</option>
+          <option value="soccer">Soccer</option>
+          <option value="basketball">Basketball</option>
+          <option value="rugby">Rugby</option>
+          <option value="hockey">Hockey</option>
+        </select></li>
+    </ul>
+
+    <ul>
+      <li><label for="bio">Bio:</label> <textarea name="bio" id="bio" cols="25" rows="5"
+          style="display: block; resize: vertical;" required></textarea></li>
+    </ul>
+
+    <div class="buttons">
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </div>
+
+  </form>
+</body>
+
+</html>

@@ -5,7 +5,7 @@ html {
 
 header {
   text-align: center;
-  background-color: blue;
+  background-color: black;
 }
 
 footer {
@@ -43,4 +43,8 @@ nav {
 
 [class$="r"] {
   background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]){
+  background-color: blue;
 }

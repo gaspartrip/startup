@@ -31,14 +31,26 @@ nav {
 
 .content {
   font-size: 14px;
+  display: inline-block;
+  width: 28%;
+  margin: 1%;
+  vertical-align: top;
 }
 
 .navigation {
   font-size: 12px;
+  display: inline-block;
+  width: 40%;
+  margin-top: 1%;
+  vertical-align:top
 }
 
 .sidebar {
   font-size: 10px;
+  display: inline-block;
+  width: 30%;
+  margin-top: 1%;
+  vertical-align:top
 }
 
 [class$="r"] {
@@ -47,4 +59,18 @@ nav {
 
 [class*="a"]:not([class$="r"]){
   background-color: blue;
+}
+
+.content, .navigation, .sidebar {
+  min-height: 150px;
+}
+
+.middle {
+  font-size: 0;
+}
+
+header, nav, section, aside, footer {
+  background-color: rgba(0, 0, 0, 0.377);
+  border-radius: 15px;
+  word-wrap: break-word;
 }

@@ -11,3 +11,12 @@
     console.log(hiddenSection.hidden);
   })
 })();
+
+//2. Adding some events
+
+const showMessage = () => {
+  alert("Alert message");
+};
+
+const alertButton = document.getElementById("alert-button");
+alertButton.addEventListener("click", showMessage);

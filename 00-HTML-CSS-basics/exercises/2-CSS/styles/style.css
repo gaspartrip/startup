@@ -1,4 +1,4 @@
-* {
+html {
   font-size: 14px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -19,4 +19,24 @@ aside {
 
 nav {
   background-color: green;
+}
+
+.header {
+  font-size: 46px;
+}
+
+.footer {
+  font-size: 10px;
+}
+
+.content {
+  font-size: 14px;
+}
+
+.navigation {
+  font-size: 12px;
+}
+
+.sidebar {
+  font-size: 10px;
 }

@@ -7,4 +7,29 @@ body {
 
 section {
   text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+article {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content {
+  align-self: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.349);
+  width: 250px;
+}
+
+#joke {
+  margin: 50px;
 }

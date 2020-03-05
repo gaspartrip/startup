@@ -12,3 +12,12 @@ Like this:
   font-size: 14px !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+# 7. Imagine there is a declaration like class="oh-no-inline-styles" style="background:red" and you need to change the background to green without changing the inline style. How could you accomplish this?
+
+Adding !important will give this rule more precedence over the inline style.
+Like this:
+
+.oh-no-inline-styles {
+  background: green !important;
+}

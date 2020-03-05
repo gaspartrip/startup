@@ -4,10 +4,12 @@
 }
 
 header {
+  text-align: center;
   background-color: blue;
 }
 
 footer {
+  text-align: center;
   background-color: chartreuse;
 }
 

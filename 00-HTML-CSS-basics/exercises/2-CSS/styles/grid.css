@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto';
+  background: #360033;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0b8793, #360033);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0b8793, #360033);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+  margin-left: 15px;
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.item {
+  place-self: center;
+  margin: 2px;
+}
+
+.content {
+  position: relative;
+}
+
+.img {
+  border: 2px solid rgb(255, 255, 255);
+  max-width: 100%;
+}
+
+.title {
+  word-break: break-all;
+}
+
+.screen {
+  word-break: break-all;
+  margin-left: 15px;
+  margin-right: auto;
+  color: white;
+  font-weight: bolder;
+  opacity: 0;
+  z-index: 1000;
+  position: absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.item:hover .screen {
+  opacity: 1;
+}
+
+.item:hover .img {
+  filter: brightness(50%);
+}

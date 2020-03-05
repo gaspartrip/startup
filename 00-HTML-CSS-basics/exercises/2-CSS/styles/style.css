@@ -40,3 +40,7 @@ nav {
 .sidebar {
   font-size: 10px;
 }
+
+[class$="r"] {
+  background-color: magenta;
+}

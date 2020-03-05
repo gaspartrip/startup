@@ -39,3 +39,25 @@ const fetchData = async () => {
 
 //Replace the button's click event with this new function
 alertButton.addEventListener("click", fetchData);
+
+//4. Data fetching with parameters
+
+const fetchRepositories = async (e) => {
+  //No page reload
+  e.preventDefault();
+  //Input with type="text" to perform a search for any value
+  const searchText = document.getElementById("search-text").value;
+  //'List of repositories' section, in the right side of the screen
+  const listOfRepositories = document.getElementById("list-of-repositories");
+  listOfRepositories.innerHTML = ""; //Cleaning previous data
+  const res = await fetch("https://api.github.com/search/repositories?q=" + searchText);
+  const data = await res.json();
+  var items = data.items;
+  for (var i = 0; i < items.length; i++) {
+    items[i] = "<li class='list-group-item'>" + items[i].name + "</li>";
+    listOfRepositories.innerHTML = listOfRepositories.innerHTML + items[i];
+  }
+}
+
+const searchBtn = document.getElementById("search-btn");
+searchBtn.addEventListener("click", fetchRepositories);

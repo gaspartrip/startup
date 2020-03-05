@@ -74,3 +74,77 @@ header, nav, section, aside, footer {
   border-radius: 15px;
   word-wrap: break-word;
 }
+
+/*Media queries*/
+
+@media all and (max-width: 699px) {
+
+  .header {
+    font-size: 30px;
+  }
+
+  .footer {
+    font-size: 7px;
+  }
+
+  .content {
+    font-size: 10px;
+  }
+
+  .navigation {
+    font-size: 9px;
+  }
+
+  .sidebar {
+    font-size: 7px;
+  }
+
+}
+
+@media all and (max-width: 699px) and (min-width: 520px) {
+
+  .header {
+    font-size: 35px;
+  }
+
+  .footer {
+    font-size: 8px;
+  }
+
+  .content {
+    font-size: 11px;
+  }
+
+  .navigation {
+    font-size: 10px;
+  }
+
+  .sidebar {
+    font-size: 8px;
+  }
+
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+
+  .header {
+    font-size: 40px;
+  }
+
+  .footer {
+    font-size: 9px;
+  }
+
+  .content {
+    font-size: 12px;
+  }
+
+  .navigation {
+    font-size: 11px;
+  }
+
+  .sidebar {
+    font-size: 9px;
+  }
+
+}

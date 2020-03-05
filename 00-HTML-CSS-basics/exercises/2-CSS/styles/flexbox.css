@@ -13,6 +13,7 @@ body {
 h1 {
   margin-left: 15px;
   color: white;
+  font-size: 50px;
 }
 
 .container {
@@ -66,4 +67,30 @@ h1 {
 
 .item:hover .img {
   filter: brightness(50%);
+}
+
+/*Media queries*/
+
+@media all and (max-width: 699px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+}
+
+@media all and (max-width: 699px) and (min-width: 520px) {
+
+  h1 {
+    font-size: 35px;
+  }
+
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+
+  h1 {
+    font-size: 40px;
+  }
+
 }

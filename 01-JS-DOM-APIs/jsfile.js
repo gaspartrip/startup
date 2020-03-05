@@ -61,3 +61,72 @@ const fetchRepositories = async (e) => {
 
 const searchBtn = document.getElementById("search-btn");
 searchBtn.addEventListener("click", fetchRepositories);
+
+//6. DOM manipulation
+
+const createTable = (array) => {
+
+  //Function that takes as input a matrix of data and outputs a DOM structure representing a table
+
+  //Table section
+  tableSection = document.getElementById("table");
+
+  //Table
+  var tbl = document.createElement("table");
+
+  //Atributes
+  tbl.setAttribute("class", "table table-dark");
+
+  //COLUMNS
+  var tr = document.createElement("tr");
+  //Column name
+  var th = document.createElement("th");
+  th.appendChild(document.createTextNode("Name"));
+  tr.appendChild(th);
+  //Column age
+  var th = document.createElement("th");
+  th.appendChild(document.createTextNode("Age"));
+  tr.appendChild(th);
+  //Append to table
+  tbl.appendChild(tr);
+
+  //ELEMENTS
+  for (var i = 0; i < array.length; i++) {
+    var tr = document.createElement("tr");
+    var tdName = document.createElement("td");
+    var tdAge = document.createElement("td");
+    tdName.appendChild(document.createTextNode(array[i].name));
+    tdAge.appendChild(document.createTextNode(array[i].age));
+    tr.appendChild(tdName);
+    tr.appendChild(tdAge);
+    tbl.appendChild(tr);
+  }
+
+  //Append to section
+  tableSection.appendChild(tbl);
+}
+
+const array = [
+  {
+    name: "Gaspar",
+    age: 26
+  },
+  {
+    name: "Luis",
+    age: 21
+  },
+  {
+    name: "Josefina",
+    age: 35
+  },
+  {
+    name: "Maria",
+    age: 31
+  },
+  {
+    name: "Adriana",
+    age: 24
+  }
+]
+
+createTable(array);

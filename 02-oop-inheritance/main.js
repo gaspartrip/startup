@@ -289,3 +289,25 @@ try {
 catch (err) {
   console.log(err);
 }
+
+// --- EXERCISE 4 ---
+
+//Mixin
+let social = {
+  share(friendName) {
+    return (friendName + " shared " + this.title);
+  },
+  like(friendName) {
+    return (friendName + " liked " + this.title);
+  }
+};
+
+//Creating a Movie object
+const ironman = new Movie("Ironman", 2008, 126);
+
+//Extending the Movie object with the Mixin subclass to have access to their methods
+Object.assign(ironman, social);
+
+//Testing
+console.log(ironman.share("Gaspar"));
+console.log(ironman.like("Gaspar"));

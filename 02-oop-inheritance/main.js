@@ -52,6 +52,7 @@ class Movie extends EventEmitter {
     this._title = title;
     this._year = year;
     this._duration = duration;
+    this._cast = [];
   }
 
   get title() {
@@ -78,6 +79,14 @@ class Movie extends EventEmitter {
     this._duration = duration;
   }
 
+  get cast() {
+    return this._cast;
+  }
+
+  set cast(cast) {
+    this._cast = cast;
+  }
+
   play() {
     super.emit("play");
   }
@@ -88,6 +97,22 @@ class Movie extends EventEmitter {
 
   resume() {
     super.emit("resume");
+  }
+
+  addCast(cast) {
+    //Allows the addition of one or more Actors (an array) to a movie
+    if (Array.isArray(cast)) {
+      for (var i = 0; i < cast.length; i++) {
+        if (cast[i] instanceof Actor) {
+          this._cast.push(cast[i]);
+        }
+      }
+    }
+    else {
+      if (cast instanceof Actor) {
+        this._cast.push(cast);
+      }
+    }
   }
 
 }
@@ -113,6 +138,18 @@ class Actor {
 
   set age(age) {
     this._age = age;
+  }
+
+}
+
+class Logger {
+
+  constructor() {
+
+  }
+
+  log(info) {
+    console.log("The '" + info + "' event has been emitted");
   }
 
 }
@@ -218,6 +255,36 @@ try {
   interstellar.play(); //Output: The 'play' event has been emitted
   interstellar.pause(); //Output: The 'pause' event has been emitted
   interstellar.resume(); //Output: The 'resume' event has been emitted
+}
+catch (err) {
+  console.log(err);
+}
+
+// --- EXERCISE 3 ---
+
+//Creating a Movie object and some Actor objects
+const theTerminator = new Movie("The Terminator", 1984, 107);
+const arnold = new Actor("Arnold Schwarzenegger", 72);
+const actors = [
+  new Actor("Paul Winfield", 64),
+  new Actor("Michael Biehn", 63),
+  new Actor("Linda Hamilton", 63)
+];
+
+//Adding the Actor objects to the Movie object
+theTerminator.addCast(arnold);
+theTerminator.addCast(actors);
+
+//Checking if the data (the Actor objects) is correctly stored
+console.log(theTerminator.cast);
+
+//Making an instance of Logger and making it listen to Movie's play event
+const logger = new Logger();
+
+theTerminator.on("play", logger.log);
+
+try {
+  theTerminator.play(); //Output: The 'play' event has been emitted
 }
 catch (err) {
   console.log(err);

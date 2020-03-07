@@ -1,76 +1,5 @@
 // --- CLASSES ---
 
-class Movie {
-
-  constructor(title, year, duration) {
-    this._title = title;
-    this._year = year;
-    this._duration = duration;
-  }
-
-  get title() {
-    return this._title;
-  }
-
-  set title(title) {
-    this._title = title;
-  }
-
-  get year() {
-    return this._year;
-  }
-
-  set year(year) {
-    this._year = year;
-  }
-
-  get duration() {
-    return this._duration;
-  }
-
-  set duration(duration) {
-    this._duration = duration;
-  }
-
-  play() {
-    return "play";
-  }
-
-  pause() {
-    return "pause";
-  }
-
-  resume() {
-    return "resume";
-  }
-
-}
-
-class Actor {
-
-  constructor(name, age) {
-    this._name = name;
-    this._age = age;
-  }
-
-  get name() {
-    return this._name;
-  }
-
-  set name(name) {
-    this._name = name;
-  }
-
-  get age() {
-    return this._age;
-  }
-
-  set age(age) {
-    this._age = age;
-  }
-
-}
-
 class EventEmitter {
 
   constructor() {
@@ -116,6 +45,78 @@ class EventEmitter {
 
 }
 
+class Movie extends EventEmitter {
+
+  constructor(title, year, duration) {
+    super();
+    this._title = title;
+    this._year = year;
+    this._duration = duration;
+  }
+
+  get title() {
+    return this._title;
+  }
+
+  set title(title) {
+    this._title = title;
+  }
+
+  get year() {
+    return this._year;
+  }
+
+  set year(year) {
+    this._year = year;
+  }
+
+  get duration() {
+    return this._duration;
+  }
+
+  set duration(duration) {
+    this._duration = duration;
+  }
+
+  play() {
+    super.emit("play");
+  }
+
+  pause() {
+    super.emit("pause");
+  }
+
+  resume() {
+    super.emit("resume");
+  }
+
+}
+
+class Actor {
+
+  constructor(name, age) {
+    this._name = name;
+    this._age = age;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  set name(name) {
+    this._name = name;
+  }
+
+  get age() {
+    return this._age;
+  }
+
+  set age(age) {
+    this._age = age;
+  }
+
+}
+
 // --- EXERCISE 1 ---
 
 //Creating some movies
@@ -132,13 +133,7 @@ johnWickChapter4.duration = 140;
 
 //Testing the getters and methods with the console
 console.log(matrix4.title, matrix4.year, matrix4.duration);
-console.log(matrix4.play());
-console.log(matrix4.pause());
-console.log(matrix4.resume());
 console.log(johnWickChapter4.title, johnWickChapter4.year, johnWickChapter4.duration);
-console.log(johnWickChapter4.play());
-console.log(johnWickChapter4.pause());
-console.log(johnWickChapter4.resume());
 
 //Creating some actors
 const keanuReeves = new Actor("Keanu R", 54);
@@ -180,15 +175,50 @@ const callback3 = () => {
 eventEmitter.on("myEvent2", callback3);
 
 //Emitting the callbacks of EVENT 1 and EVENT 2
-console.log("- Emitting Event 1...");
-eventEmitter.emit("myEvent1");
-console.log("- Emitting Event 2...");
-eventEmitter.emit("myEvent2");
+try {
+  console.log("- Emitting Event 1...");
+  eventEmitter.emit("myEvent1");
+  console.log("- Emitting Event 2...");
+  eventEmitter.emit("myEvent2");
+}
+catch (err) {
+  console.log(err);
+}
 
 //Deleting "callback1" from EVENT 1
-console.log("- Deleting 'callback1' from Event 1...");
-eventEmitter.off("myEvent1", callback1);
+try {
+  console.log("- Deleting 'callback1' from Event 1...");
+  eventEmitter.off("myEvent1", callback1);
+}
+catch (err) {
+  console.log(err);
+}
 
 //Checking/Emitting the callbacks of EVENT 1 ("callback1" should not be included)
-console.log("- Emitting Event 1...");
-eventEmitter.emit("myEvent1");
+try {
+  console.log("- Emitting Event 1...");
+  eventEmitter.emit("myEvent1");
+}
+catch (err) {
+  console.log(err);
+}
+
+// --- EXERCISE 2 ---
+
+//Creating movie
+const interstellar = new Movie("Interstellar", 2014, 169);
+
+//Using the inherited methods to publish the events 'play', 'pause' and 'resume' and theirs callbacks
+interstellar.on("play", () => { console.log("The 'play' event has been emitted") });
+interstellar.on("pause", () => { console.log("The 'pause' event has been emitted") });
+interstellar.on("resume", () => { console.log("The 'resume' event has been emitted") });
+
+//Calling Movie methods and triggering their events
+try {
+  interstellar.play(); //Output: The 'play' event has been emitted
+  interstellar.pause(); //Output: The 'pause' event has been emitted
+  interstellar.resume(); //Output: The 'resume' event has been emitted
+}
+catch (err) {
+  console.log(err);
+}

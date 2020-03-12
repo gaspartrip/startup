@@ -1,0 +1,51 @@
+body {
+  background: #FEAC5E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.page-header {
+  text-align: center;
+}
+
+.page-title {
+  display: inline;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.432);
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.storage-section {
+  text-align: center;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.storage-form {
+  margin: 20px;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.432);
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 400px;
+}
+
+.storage-text-area {
+  resize: vertical;
+}
+
+.input-wrapper {
+  margin: 10px;
+}
+
+.input-wrapper label {
+  display:block;
+}

@@ -18,28 +18,30 @@ body {
   border-radius: 15px;
 }
 
-.storage-section {
+.page-section {
   text-align: center;
   margin-top: 100px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .storage-form {
-  margin: 20px;
   align-self: center;
+  margin: 20px;
   font-size: 25px;
   background-color: rgba(0, 0, 0, 0.432);
   color: white;
   border: 1px solid white;
   border-radius: 15px;
   padding: 15px;
-  width: 400px;
+  width: 50%
 }
 
 .storage-text-area {
   resize: vertical;
+  width: 80%
 }
 
 .input-wrapper {
@@ -48,4 +50,21 @@ body {
 
 .input-wrapper label {
   display:block;
+}
+
+.drop-zone {
+  align-self: center;
+  padding: 15px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.432);
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 50%;
+  height: 200px;
+}
+
+.drop-zone-focus {
+  background-color: rgba(73, 169, 182, 0.432);
+  cursor: move;
 }

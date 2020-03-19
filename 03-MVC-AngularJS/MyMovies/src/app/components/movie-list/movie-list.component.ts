@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MovieService } from '../../services/movie.service';
-import { Movie } from '../../models/movie';
+import { IMovie } from '../../models/movie';
 
 @Component({
   selector: 'app-movie-list',
@@ -10,7 +10,7 @@ import { Movie } from '../../models/movie';
 })
 export class MovieListComponent implements OnInit {
 
-  movies: Movie[] = [];
+  movies: IMovie[] = [];
   movieForm;
   alertMessage = "";
 
@@ -31,13 +31,13 @@ export class MovieListComponent implements OnInit {
       .subscribe(movies => this.movies = movies);
   }
 
-  onSubmit(movieData): void {
+  onSubmit(movieData: IMovie): void {
     if (this.movieForm.valid) {
       const title = movieData.title.trim();
       const year = movieData.year;
       const duration = movieData.duration;
       this.movieForm.reset();
-      this.movieService.addMovie({ title, year, duration } as Movie)
+      this.movieService.addMovie({ title, year, duration } as IMovie)
         .subscribe(movie => {
           this.movies.push(movie);
           this.alertMessage = "Movie added!";

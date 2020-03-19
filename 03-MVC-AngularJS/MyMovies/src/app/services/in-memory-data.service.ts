@@ -1,5 +1,5 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Movie } from '../models/movie';
+import { IMovie } from '../models/movie';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -24,7 +24,7 @@ export class InMemoryDataService implements InMemoryDbService {
     return {movies};
   }
 
-  genId(movies: Movie[]): number {
+  genId(movies: IMovie[]): number {
     return movies.length > 0 ? Math.max(...movies.map(movie => movie.id)) + 1 : 0;
   }
 

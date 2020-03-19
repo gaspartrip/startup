@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Movie } from '../..//models/movie';
+import { IMovie } from '../..//models/movie';
 import { MovieService } from '../../services/movie.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { MovieService } from '../../services/movie.service';
 })
 export class MovieDetailComponent implements OnInit {
 
-  movie: Movie;
+  movie: IMovie;
 
   constructor(
     private movieService: MovieService,

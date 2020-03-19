@@ -6,7 +6,7 @@ import {
    debounceTime, distinctUntilChanged, switchMap
  } from 'rxjs/operators';
 
-import { Movie } from '../../models/movie';
+import { IMovie } from '../../models/movie';
 import { MovieService } from '../../services/movie.service';
 
 @Component({
@@ -16,7 +16,7 @@ import { MovieService } from '../../services/movie.service';
 })
 export class MovieSearchComponent implements OnInit {
   
-  movies$: Observable<Movie[]>;
+  movies$: Observable<IMovie[]>;
   private searchTerms = new Subject<string>();
 
   constructor(private movieService: MovieService) {}

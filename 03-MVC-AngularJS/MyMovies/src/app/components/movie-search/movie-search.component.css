@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-.search-result li {
+.search-component {
+  font-family: 'Roboto', sans-serif;
+}
+
+.search-result-element {
   margin: 0 auto;
   border-bottom: 1px solid gray;
   border-left: 1px solid gray;
@@ -12,24 +16,23 @@
   list-style-type: none;
 }
 
-.search-result li:hover {
+.search-result-element:hover {
   background-color: #607D8B;
 }
 
-.search-result li a {
+.search-result-link {
   color: #888;
   display: block;
   text-decoration: none;
   padding: 15px;
-  font-family: 'Roboto', sans-serif;
   font-size: 13px;
 }
 
-.search-result li a:hover {
+.search-result-link:hover {
   color: white;
 }
 
-.search-result li a:active {
+.search-result-link:active {
   color: white;
 }
 

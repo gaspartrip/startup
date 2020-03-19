@@ -1,0 +1,9 @@
+<header class="top-bar-header">
+  <h1 class="top-bar-title">{{ title }}</h1>
+  <nav class="main-navigation">
+    <ul class="nav-list">
+      <li class="nav-list-item"><a class="nav-list-button" [routerLink]="['/']" routerLinkActive="active-nav-list-button" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+      <li class="nav-list-item"><a class="nav-list-button" [routerLink]="['/movies']" routerLinkActive="active-nav-list-button" [routerLinkActiveOptions]="{ exact: true }">Movies</a></li>
+    </ul>
+  </nav>
+</header>

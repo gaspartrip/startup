@@ -6,7 +6,6 @@ import { catchError, map } from 'rxjs/operators';
 
 import { IMovie } from '../models/movie';
 
-
 @Injectable({ providedIn: 'root' })
 export class MovieService {
 

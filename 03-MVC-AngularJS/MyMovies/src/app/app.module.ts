@@ -7,6 +7,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     TopBarComponent,
     MovieListComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,

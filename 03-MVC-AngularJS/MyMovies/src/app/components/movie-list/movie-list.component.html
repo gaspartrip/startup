@@ -2,8 +2,10 @@
   <h2 class="section-title">My Movie list</h2>
   <ul class="movies">
     <li class="movie-card" *ngFor="let movie of movies">
+      <a routerLink="/detail/{{movie.id}}">
         <span class="badge">{{movie.id}}</span>
         <h3 class="movie-title">{{movie.title}}</h3>
+      </a>
     </li>
   </ul>
 </section>

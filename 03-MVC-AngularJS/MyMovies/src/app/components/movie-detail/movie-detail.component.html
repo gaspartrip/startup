@@ -1,0 +1,10 @@
+<section *ngIf="movie">
+  <h2 class="section-title">{{movie.title | uppercase}} Details</h2>
+  <div class="card">
+    <img class="card-img" src="assets/img/movie-card.jpg" alt="Avatar">
+    <div class="container">
+      <h4><b>{{movie.title}}</b></h4>
+      <p>{{movie.year}} / {{movie.duration}}min</p>
+    </div>
+  </div> 
+</section>

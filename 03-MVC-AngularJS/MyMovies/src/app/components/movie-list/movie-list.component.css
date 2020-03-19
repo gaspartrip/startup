@@ -1,8 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap');
 
+.movies-content {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .movie-card {
   font-family: 'Baloo Chettan 2', cursive;
   list-style-type: none;
+  margin: 10px;
+}
+
+.movie-card:hover .badge {
+  background-color: rgba(24, 179, 132, 0.842);
+  font-size: 17px;
+}
+
+.movie-card:hover .movie-title {
+  font-size: 17px;
 }
 
 .badge {
@@ -10,23 +28,108 @@
   font-size: 15px;
   color: white;
   padding: 0.8em 0.7em 0 0.7em;
-  background-color:#405061;
+  background-color: #3c434b;
   line-height: 1em;
   height: 1.8em;
-  min-width: 16px;
-  text-align: right;
+  min-width: 25px;
+  text-align: center;
   border-radius: 4px 0 0 4px;
 }
 
 .movie-title {
   display: inline-block;
   font-size: 15px;
-  color: rgb(37, 36, 36);
+  color: rgb(27, 25, 25);
   padding: 0.8em 0.7em 0 0.7em;
-  background-color:#c4ceda;
+  background-color: #c4ceda;
   line-height: 1em;
   height: 1.8em;
   min-width: 16px;
   text-align: right;
   border-radius: 0 4px 4px 0;
+}
+
+.save-button {
+	box-shadow:inset 0px 34px 0px -15px #3dc21b;
+	background-color:#44c767;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+  padding:9px 23px;
+  margin: 15px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2f6627;
+}
+
+.save-button:hover {
+	background-color:#5cbf2a;
+}
+
+.movie-form {
+  font-family: 'Baloo Chettan 2', cursive;
+  margin: 3%;
+  width: 350px;
+  padding: 25px;
+  background-color: rgba(128, 128, 128, 0.253);
+  border-radius: 15px;
+}
+
+.movie-form-title {
+  text-align: center;
+  font-size: 20px;
+}
+
+.movie-form-group {
+  margin: 15px;
+}
+
+.movie-form-group input {
+  width: 100%;
+  min-width: 100px;
+}
+
+.movie-form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.alert-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c4ceda;
+  color: black;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.clean-button {
+  background-color: transparent;
+  border: transparent;
+  color: rgba(255, 0, 0, 0.602);
+}
+
+.clean-button:hover {
+  transform:scale(1.3,1.3);
+  -webkit-transform:scale(1.3,1.3);
+  -moz-transform:scale(1.3,1.3);
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media all and (max-width: 699px) {
+
+  .movie-title {
+    font-size: 14px;
+  }
+
+  .badge {
+    font-size: 14px;
+  }
+
 }

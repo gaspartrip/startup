@@ -43,7 +43,7 @@
 }
 
 .nav-list-button:hover {
-  color: #FF6347;
+  color: rgba(24, 179, 132, 0.842);
 }
 
 .active-nav-list-button {

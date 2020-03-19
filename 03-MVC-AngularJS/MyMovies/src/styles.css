@@ -13,11 +13,11 @@ body {
 }
 
 .content-wrap {
-  padding-left: 15px;
   padding-bottom: 100px;
 }
 
 .section-title {
+  margin-left: 15px;
   font-family: 'Baloo Chettan 2', cursive;
   color: grey;
 }

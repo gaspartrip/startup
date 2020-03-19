@@ -1,11 +1,44 @@
 <section>
-  <h2 class="section-title">My Movie list</h2>
-  <ul class="movies">
-    <li class="movie-card" *ngFor="let movie of movies">
-      <a routerLink="/detail/{{movie.id}}">
-        <span class="badge">{{movie.id}}</span>
-        <h3 class="movie-title">{{movie.title}}</h3>
-      </a>
-    </li>
-  </ul>
+  <h2 class="section-title">My Movie List</h2>
+  <div class="movies-content">
+    <form class="movie-form" [formGroup]="movieForm" (ngSubmit)="onSubmit(movieForm.value)">
+      <h3 class="movie-form-title">Add movie</h3>
+
+      <div class="movie-form-group">
+        <label class="movie-form-label" for="title">
+          Title
+        </label>
+        <input id="title" type="text" formControlName="title">
+      </div>
+
+      <div class="movie-form-group">
+        <label class="movie-form-label" for="year">
+          Year
+        </label>
+        <input id="year" type="number" formControlName="year">
+      </div>
+
+      <div class="movie-form-group">
+        <label class="movie-form-label" for="duration">
+          Duration
+        </label>
+        <input id="duration" type="number" formControlName="duration">
+      </div>
+
+      <button class="save-button" type="submit">Save</button>
+      <div class="alert-message" *ngIf="alertMessage">
+        {{ alertMessage }}
+        <button class="clean-button" (click)=cleanAlertMessage()><i
+          class="material-icons">cancel</i></button>
+      </div>
+    </form>
+    <ul class="movies">
+      <li class="movie-card" *ngFor="let movie of movies">
+        <a routerLink="/detail/{{movie.id}}">
+          <span class="badge">{{movie.id}}</span>
+          <h3 class="movie-title">{{movie.title}}</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
 </section>

@@ -7,14 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  showMe: boolean = false;
-
   constructor() { }
 
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.showMe = true;
-    }, 1000)
-  }
+  ngOnInit(): void { }
 
 }

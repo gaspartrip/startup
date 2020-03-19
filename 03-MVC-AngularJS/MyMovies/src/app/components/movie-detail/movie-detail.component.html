@@ -3,8 +3,20 @@
   <div class="card">
     <img class="card-img" src="assets/img/movie-card.jpg" alt="Avatar">
     <div class="container">
-      <h4><b>{{movie.title}}</b></h4>
-      <p>{{movie.year}} / {{movie.duration}}min</p>
+      <h4>
+        <input class="movie-lg-input" [(ngModel)]="movie.title" placeholder="Title"/>
+      </h4>
+      <p>
+        <label for="year">Year</label>
+        <input class="movie-sm-input" id="year" type="number" [(ngModel)]="movie.year" placeholder="Year"/>
+        <label for="duration">Duration (min)</label>
+        <input class="movie-sm-input" id="duration" type="number" [(ngModel)]="movie.duration" placeholder="Duration"/>
+      </p>
     </div>
-  </div> 
+  </div>
+  <div class="buttons-container">
+    <button (click)="goBack()" class="movie-button">Go back</button>
+    <button (click)="save()" class="movie-button">Save changes</button>
+    <button (click)="removeMovie()" class="movie-button">Delete</button>
+  </div>
 </section>

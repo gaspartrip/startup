@@ -22,4 +22,17 @@ describe('TopBarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have as title 'MyMovies'`, () => {
+    const fixture = TestBed.createComponent(TopBarComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('MyMovies');
+  });
+
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(TopBarComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.top-bar-title').textContent).toContain('MyMovies');
+  });
 });

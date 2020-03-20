@@ -30,6 +30,19 @@ export class MovieDetailComponent implements OnInit {
       .subscribe(movie => this.movie = movie);
   }
 
+  addImage(event) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]);
+
+      reader.onload = (event) => {
+        console.log(event.target);
+        this.movie.imageUrl = event.target.result;
+      }
+    }
+  }
+
   removeMovie(): void {
     this.movieService.removeMovie(this.movie).subscribe();
     this.goBack();

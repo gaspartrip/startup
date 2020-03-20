@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+.movie-detail {
+  margin-bottom: 40px;
+}
+
 .card {
   background-color: rgba(255, 255, 255, 0.822);
   text-align: center;
@@ -12,16 +16,26 @@
 }
 
 .card-img {
-  filter: brightness(0.5);
+  max-width: 500px;
+  max-height: 250px;
   width: 100%;
+  filter: brightness(0.7);
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.card:hover .card-img {
+  filter: brightness(1);
+}
+
 .container {
   padding: 2px 16px;
+}
+
+.movie-form-control {
+  margin: 15px 0 15px 0;
 }
 
 .movie-lg-input {
@@ -37,6 +51,31 @@
   margin-right: 10px;
   text-align: center;
   width: 60px;
+}
+
+.movie-img-input {
+  display: none;
+}
+
+.movie-img-label {
+	box-shadow:inset 0px 1px 0px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:3px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2b665e;
+}
+
+.movie-img-label:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
 }
 
 /* Chrome, Safari, Edge, Opera */

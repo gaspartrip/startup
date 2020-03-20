@@ -97,31 +97,6 @@
   margin-bottom: 5px;
 }
 
-.alert-message {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #c4ceda;
-  color: black;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 3px 3px 3px 3px;
-}
-
-.clean-button {
-  background-color: transparent;
-  border: transparent;
-  color: rgba(255, 0, 0, 0.602);
-}
-
-.clean-button:hover {
-  transform:scale(1.3,1.3);
-  -webkit-transform:scale(1.3,1.3);
-  -moz-transform:scale(1.3,1.3);
-  opacity: 1;
-  cursor: pointer;
-}
-
 @media all and (max-width: 699px) {
 
   .movie-title {

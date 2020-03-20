@@ -26,11 +26,7 @@
       </div>
 
       <button class="save-button" type="submit">Save</button>
-      <div class="alert-message" *ngIf="alertMessage">
-        {{ alertMessage }}
-        <button class="clean-button" (click)=cleanAlertMessage()><i
-          class="material-icons">cancel</i></button>
-      </div>
+      <app-alert-message [alertMessage]=saveStatus (closed)="onClosed($event)"></app-alert-message>
     </form>
     <ul class="movies">
       <li class="movie-card" *ngFor="let movie of movies">

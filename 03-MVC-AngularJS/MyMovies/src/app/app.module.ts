@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { MovieSearchComponent } from './components/movie-search/movie-search.component';
+import { AlertMessageComponent } from './components/alert-message/alert-message.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MovieSearchComponent } from './components/movie-search/movie-search.com
     FooterComponent,
     DashboardComponent,
     MovieDetailComponent,
-    MovieSearchComponent
+    MovieSearchComponent,
+    AlertMessageComponent
   ],
   imports: [
     BrowserModule,

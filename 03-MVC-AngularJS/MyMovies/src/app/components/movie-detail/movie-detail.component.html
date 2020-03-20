@@ -18,8 +18,10 @@
       </div>
     </div>
   </div>
+  <div class="message-wraper">
+    <app-alert-message [alertMessage]=saveStatus (closed)="onClosed($event)"></app-alert-message>
+  </div>
   <div class="buttons-container">
-    <button (click)="goBack()" class="movie-button">Go back</button>
     <button (click)="save()" class="movie-button">Save changes</button>
     <button (click)="removeMovie()" class="movie-button">Delete</button>
   </div>

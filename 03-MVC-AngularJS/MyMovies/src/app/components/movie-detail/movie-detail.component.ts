@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { IMovie } from '../..//models/movie';
 import { MovieService } from '../../services/movie.service';
@@ -13,11 +12,12 @@ import { MovieService } from '../../services/movie.service';
 export class MovieDetailComponent implements OnInit {
 
   movie: IMovie;
+  saveStatus: String = "";
 
   constructor(
     private movieService: MovieService,
     private route: ActivatedRoute,
-    private location: Location
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -37,7 +37,6 @@ export class MovieDetailComponent implements OnInit {
       reader.readAsDataURL(event.target.files[0]);
 
       reader.onload = (event) => {
-        console.log(event.target);
         this.movie.imageUrl = event.target.result;
       }
     }
@@ -45,18 +44,25 @@ export class MovieDetailComponent implements OnInit {
 
   removeMovie(): void {
     this.movieService.removeMovie(this.movie).subscribe();
-    this.goBack();
+    this.router.navigateByUrl('/movies');
   }
 
   save(): void {
-    this.movieService.updateMovie(this.movie)
-      .subscribe(() => this.goBack());
+    if(this.movie.title) {
+      this.movieService.updateMovie(this.movie)
+      .subscribe(() => {
+        this.saveStatus = "Changes saved";
+      });
+    }
+    else {
+      this.saveStatus = "The movie must have a title!";
+    }
   }
 
-  goBack(): void {
-    if(this.movie.title === "")
-      this.movie.title = "Unnamed";
-    this.location.back();
+  onClosed(closed: boolean) {
+    if(closed) {
+      this.saveStatus = "";
+    }
   }
 
 } 

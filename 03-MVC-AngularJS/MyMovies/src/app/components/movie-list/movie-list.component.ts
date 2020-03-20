@@ -13,7 +13,7 @@ export class MovieListComponent implements OnInit {
 
   movies: IMovie[] = [];
   movieForm;
-  alertMessage = "";
+  saveStatus: String;
 
   constructor(private movieService: MovieService, private formBuilder: FormBuilder) {
     this.movieForm = this.formBuilder.group({
@@ -39,16 +39,18 @@ export class MovieListComponent implements OnInit {
       this.movieService.addMovie(movieData)
         .subscribe(movie => {
           this.movies.push(movie);
-          this.alertMessage = "Movie added!";
+          this.saveStatus = "Movie added!";
         });
     }
     else {
-      this.alertMessage = "All inputs must be filled out correctly!";
+      this.saveStatus = "All inputs must be filled out correctly!";
     }
   }
 
-  cleanAlertMessage(): void {
-    this.alertMessage = "";
+  onClosed(closed: boolean) {
+    if(closed) {
+      this.saveStatus = "";
+    }
   }
 
 }

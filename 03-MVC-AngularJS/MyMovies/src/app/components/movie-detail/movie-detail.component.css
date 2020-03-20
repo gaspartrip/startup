@@ -114,6 +114,11 @@
 	background-color:#b34332;
 }
 
+.message-wraper {
+  width: 250px;
+  margin: 0 auto;
+}
+
 @media all and (max-width: 699px) {
 
   .card {

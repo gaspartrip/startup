@@ -7,7 +7,7 @@
 .card {
   background-color: rgba(255, 255, 255, 0.822);
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   margin: 0 auto;
   width: 500px;
@@ -23,7 +23,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card:hover .card-img {
@@ -58,34 +58,35 @@
 }
 
 .movie-img-label {
-	box-shadow:inset 0px 1px 0px 0px #91b8b3;
-	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-	background-color:#768d87;
-	border-radius:3px;
-	border:1px solid #566963;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:13px;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2b665e;
+  box-shadow: inset 0px 1px 0px 0px #91b8b3;
+  background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+  background-color: #768d87;
+  border-radius: 3px;
+  border: 1px solid #566963;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2b665e;
 }
 
 .movie-img-label:hover {
-	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
-	background-color:#6c7c7c;
+  background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+  background-color: #6c7c7c;
 }
 
 /* Chrome, Safari, Edge, Opera */
-.movie-sm-input::-webkit-outer-spin-button,
-.movie-sm-input::-webkit-inner-spin-button {
+
+.movie-sm-input::-webkit-outer-spin-button, .movie-sm-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
+
 .movie-sm-input {
   -moz-appearance: textfield;
 }
@@ -96,22 +97,22 @@
 }
 
 .movie-button {
-	box-shadow:inset 0px 34px 0px -15px #b54b3a;
-	background-color:#a73f2d;
-	border:1px solid #241d13;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:9px 23px;
-	text-decoration:none;
-  text-shadow:0px -1px 0px #7a2a1d;
+  box-shadow: inset 0px 34px 0px -15px #b54b3a;
+  background-color: #a73f2d;
+  border: 1px solid #241d13;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 9px 23px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #7a2a1d;
   margin: 4px;
 }
 
 .movie-button:hover {
-	background-color:#b34332;
+  background-color: #b34332;
 }
 
 .message-wraper {
@@ -120,43 +121,34 @@
 }
 
 @media all and (max-width: 699px) {
-
   .card {
     width: 330px;
     font-size: 14px;
   }
-
   .movie-sm-input {
     font-size: 12px;
     width: 40px;
   }
-
 }
 
 @media all and (max-width: 699px) and (min-width: 520px) {
-
   .card {
     width: 350px;
     font-size: 16px;
   }
-
   .movie-sm-input {
     font-size: 12px;
     width: 50px;
   }
-
 }
 
 @media all and (max-width: 1000px) and (min-width: 700px) {
-
   .card {
     width: 400px;
     font-size: 18px;
   }
-
   .movie-sm-input {
     font-size: 12px;
     width: 55px;
   }
-
 }

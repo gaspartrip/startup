@@ -43,16 +43,17 @@ export class MovieDetailComponent implements OnInit {
   }
 
   removeMovie(): void {
-    this.movieService.removeMovie(this.movie).subscribe();
-    this.router.navigateByUrl('/movies');
+    this.movieService.removeMovie(this.movie).subscribe(() => {
+      this.router.navigateByUrl('/movies');
+    });
   }
 
   save(): void {
-    if(this.movie.title) {
+    if (this.movie.title) {
       this.movieService.updateMovie(this.movie)
-      .subscribe(() => {
-        this.saveStatus = "Changes saved";
-      });
+        .subscribe(() => {
+          this.saveStatus = "Changes saved";
+        });
     }
     else {
       this.saveStatus = "The movie must have a title!";
@@ -60,7 +61,7 @@ export class MovieDetailComponent implements OnInit {
   }
 
   onClosed(closed: boolean) {
-    if(closed) {
+    if (closed) {
       this.saveStatus = "";
     }
   }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript and DOM APIs</title>
+
+  <!-- Normalize -->
+  <link href="normalize.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Style -->
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>JavaScript and DOM APIs</h1>
+  </header>
+  <article>
+    <section class="hidden-section">
+      Hello World
+    </section>
+    <div class="container">
+      <section id="joke-section">
+        <div class="content" style="align-items: center;">
+          <h4 class="mb-4">Get a joke from Chuck Norris</h4>
+          <button class="btn btn-secondary btn-lg" id="alert-button">Click me!</button>
+          <p id="joke"></p>
+        </div>
+      </section>
+      <section>
+        <div class="content">
+          <h4 class="mb-4 text-white">Table</h4>
+          <section id="table">
+          </section>
+        </div>
+      </section>
+      <section id="right-section">
+        <div class="content">
+          <h4 class="mb-4">List of repositories</h4>
+          <form>
+            <input class="form-control" id="search-text" type="text" placeholder="Insert search keyword">
+            <button class="btn btn-success btn-sm mt-3" id="search-btn">Search</button>
+          </form>
+          <ul class="list-group text-dark mt-3" id="list-of-repositories">
+
+          </ul>
+        </div>
+      </section>
+    </div>
+  </article>
+  <script type="text/javascript" src="jsfile.js"></script>
+</body>
+
+</html>

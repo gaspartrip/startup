@@ -1,0 +1,28 @@
+<section class="movie-detail" *ngIf="movie">
+  <h2 class="section-title">{{movie.title | uppercase}} Details</h2>
+  <div class="card">
+    <img class="card-img" [src]="movie.imageUrl">
+    <div class="container">
+      <h4>
+        <input class="movie-lg-input" [(ngModel)]="movie.title" placeholder="Title"/>
+      </h4>
+      <div class="movie-form-control">
+        <label for="year">Year</label>
+        <input class="movie-sm-input" id="year" type="number" [(ngModel)]="movie.year" placeholder="Year"/>
+        <label for="duration">Duration (min)</label>
+        <input class="movie-sm-input" id="duration" type="number" [(ngModel)]="movie.duration" placeholder="Duration"/>
+      </div>
+      <div class="movie-form-control">
+        <label for="image" class="movie-img-label">Set image (2:1 scale)</label>
+        <input type="file" class="movie-img-input" id="image" name="image" (change)="addImage($event)" />
+      </div>
+    </div>
+  </div>
+  <div class="message-wraper">
+    <app-alert-message [alertMessage]=saveStatus (closed)="onClosed($event)"></app-alert-message>
+  </div>
+  <div class="buttons-container">
+    <button (click)="save()" class="movie-button">Save changes</button>
+    <button (click)="removeMovie()" class="movie-button">Delete</button>
+  </div>
+</section>

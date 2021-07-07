@@ -1,0 +1,70 @@
+body {
+  background: #FEAC5E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.page-header {
+  text-align: center;
+}
+
+.page-title {
+  display: inline;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.432);
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.page-section {
+  text-align: center;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.storage-form {
+  align-self: center;
+  margin: 20px;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.432);
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 50%
+}
+
+.storage-text-area {
+  resize: vertical;
+  width: 80%
+}
+
+.input-wrapper {
+  margin: 10px;
+}
+
+.input-wrapper label {
+  display:block;
+}
+
+.drop-zone {
+  align-self: center;
+  padding: 15px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.432);
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 50%;
+  height: 200px;
+}
+
+.drop-zone-focus {
+  background-color: rgba(73, 169, 182, 0.432);
+  cursor: move;
+}

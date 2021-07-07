@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topic 3 - Browser APIs</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <h1 class="page-title">Topic 3 - Browser APIs</h1>
+  </header>
+
+  <section class="page-section">
+    <header>
+      <h2>Storages</h2>
+    </header>
+    <form class="storage-form">
+      <div class="input-wrapper">
+        <label for="text-area">Text area</label>
+        <textarea class="storage-text-area" id="text-area" name="text-area" required></textarea>
+      </div>
+      <button id="save-button">Save</button>
+      <button id="clear-button">Clear</button>
+    </form>
+  </section>
+
+  <section class="page-section">
+    <header>
+      <h2>Drag and Drop</h2>
+    </header>
+    <!-- Drop zone-->
+    <div class="drop-zone" id="drop-zone">
+      <p>Drag and drop a .txt file here</p>
+      <p id="drop-data">No data</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <header>
+      <h2>WebSockets</h2>
+    </header>
+    <div id="output"></div>
+  </section>
+
+  <script src="storages.js"></script>
+  <script src="dragAndDrop.js"></script>
+  <script src="webSockets.js"></script>
+</body>
+
+</html>
